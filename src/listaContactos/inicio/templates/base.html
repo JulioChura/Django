@@ -8,9 +8,23 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
+    <div class="header">
+        <ul class="nav">
+            <li>Inicio</li>
+            <li>Sobre Nosotros</li>
+            <li>Contacto</li>
+        </ul>
+    </div>
+    
     {% block content %}
     
     {% endblock content %}
+    <div class="footer">
+        <p>
+            Todos los derechos reservados
+            Sitio web hecho con django {{name}}
+        </p>
+    </div>
 </body>
 </html>
 
