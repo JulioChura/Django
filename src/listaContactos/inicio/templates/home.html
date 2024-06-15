@@ -23,6 +23,17 @@
                 <li> {{forloop.counter}} </li>
             {% endfor %}
         </ul>    
+
+        <h2>Probando el tag if</h2>
+        <ul class="lista">
+            {% for item in lista %}
+            
+            {% if forloop.counter|divisibleby:2 %}
+                <li> {{forloop.counter}} </li>
+            {% endif %}
+            {% endfor %}
+        </ul> 
+
     </div>
     
 {% endblock content %}
