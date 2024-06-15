@@ -8,6 +8,7 @@ def myHomeView(request):
         "name":"Julio",
         "text": "este semestre esta aglo complicado",
         "number": 233,
+        "lista": [22,2,3,5,6,87,6,7,23,23,23]
     }
     return render(request, "home.html", context)
 

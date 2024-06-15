@@ -64,3 +64,15 @@ h2 {
     margin: 1rem;
     width: 10rem;
 }
+
+.lista {
+    font-size: 3rem;
+}
+
+.container {
+    margin: 0 auto;
+    width: 500rem;
+    max-width: 80%;
+    background-color: antiquewhite;
+    padding: 4rem;
+}

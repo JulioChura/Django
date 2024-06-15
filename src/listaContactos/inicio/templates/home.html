@@ -6,4 +6,15 @@
     {{request.user.is_authenticated}}
     <h2>{{text}}</h2>
     <h2>{{number}}</h2>
+
+    <div class="container">
+        <h1>Probando el tag for</h3>
+        <ul class="lista">  
+            {% for item in lista %}
+                <li>{{item}}</li>
+            {% endfor %}
+                
+        </ul>
+    </div>
+    
 {% endblock content %}
