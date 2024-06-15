@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */
+}
+
+.header {
+    background-color: black;
+    font-size: 4rem;
+    width: 100%;
+    margin-bottom: 5rem;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    list-style-type: none;
+}
+
+.footer {
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    padding: auto;
+}
+
+.form {
+    margin: 0 auto;
+    width: 60rem;
+    max-width: 80%;
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 2.6rem;
+    padding: 1rem;
+    font-size: 2.5rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin: 2rem;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    font-size: 2.7rem;
+    margin: 1rem;
+    width: 10rem;
+}
+
+.lista {
+    font-size: 3rem;
+}
+
+.container {
+    margin: 0 auto;
+    width: 500rem;
+    max-width: 80%;
+    background-color: antiquewhite;
+    padding: 4rem;
+}

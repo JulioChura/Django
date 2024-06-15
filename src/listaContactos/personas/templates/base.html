@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="header">
+        <ul class="nav">
+            <li>Inicio</li>
+            <li>Sobre Nosotros</li>
+            <li>Contacto</li>
+        </ul>
+    </div>
+    
+    {% block content %}
+    
+    {% endblock content %}
+    <div class="footer">
+        <p>
+            Todos los derechos reservados
+            Sitio web hecho con django {{name}}
+        </p>
+    </div>
+</body>
+</html>
+
+    
