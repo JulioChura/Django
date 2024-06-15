@@ -15,6 +15,14 @@
             {% endfor %}
                 
         </ul>
+        <br>
+        <h2>Probando forloop.counter con la lista anterior</h2>
+        
+        <ul class="lista">
+            {% for item in lista %}
+                <li> {{forloop.counter}} </li>
+            {% endfor %}
+        </ul>    
     </div>
     
 {% endblock content %}
