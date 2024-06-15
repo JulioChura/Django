@@ -41,6 +41,11 @@
         {% else %}
             <p>{{text}}</p>
         {% endif %}
+
+        <h2>Probando mas filtros</h2>
+        <h3> {{text|upper}} </h3>
+        <h3>Contando la cantidad de palabras en la frase: {{text|wordcount}} </h3>
+        <h3>Probado truncar: {{text|truncatewords_html:2}}</h3>
             
     </div>
     
