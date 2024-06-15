@@ -4,10 +4,12 @@ from django.http import HttpResponse
 # Create your views here.
 
 def myHomeView(request):
-    varriables = {
-        "name":"Julio"
+    context = {
+        "name":"Julio",
+        "text": "este semestre esta aglo complicado",
+        "number": 233,
     }
-    return render(request, "home.html", varriables)
+    return render(request, "home.html", context)
 
 def anotherView(request):
     return HttpResponse("<h1>Se ha creado la funcion anotherView</h1>")
