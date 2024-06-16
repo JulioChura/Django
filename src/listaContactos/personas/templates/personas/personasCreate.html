@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <form class="container formulario" method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
+    <form action="." class="container formulario" method="GET">
+        {% comment %} {% csrf_token %}
+        {{form.as_p}} {% endcomment %}
+        <input type="text" name="q" placeholder="buscar">
         <input class="btn" type="submit" value="Grabar">
     </form>
 {% endblock content %}
