@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form class="container formulario" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="btn" type="submit" value="Grabar">
+    </form>
+{% endblock content %}
+    
