@@ -109,3 +109,8 @@ label {
     font-size: 3rem;
     text-align: center;
 }
+
+.cajaGrande {
+    padding: 3rem;
+    font-size: 2rem;
+}
