@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.views.generic.list import  (ListView,)
+
 from .models import Persona
 from .forms import PersonaForm
 
@@ -29,3 +31,6 @@ def personaCreateView(request):
 
 def searchForHelp(request):
     return render(request, 'personas/search.html', {})
+
+class PersonaList(ListView):
+    model = Persona
