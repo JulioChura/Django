@@ -2,20 +2,26 @@
 
 
 {% block title %}
-    Lista de Personas
+    <h1 class="titulo">
+        Lista de Personas
+    </h1>
+    
 {% endblock title %}
     
 
 {% block content %}
-    <h1>Listado de personas</h1>
-    
-    {% for instance in object_list  %}
-        <p>
-            {{instance.id}} - 
-            <a href="{{instance.get_absolute_url}}">{{ instance.nombre }}</a>
-        </p>
+
+    <div class="container">
+        <h1>Listado de personas</h1>
         
-    {% endfor %}
-        
+        {% for instance in object_list  %}
+            <p>
+                {{ instance.id }} - 
+                <a href="{{ instance.get_absolute_url }}">{{ instance.nombres }}</a>
+            </p>
+            
+        {% endfor %}
+    </div>
+
 {% endblock content %}
     
