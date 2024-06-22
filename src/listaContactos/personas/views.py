@@ -1,8 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 
+from django.views.generic.detail import DetailView
+
+from django.views.generic.edit import CreateView
+
 from .models import Persona
-from .forms import PersonaForm
+from .forms import PersonaForm, RawPersonaForm
 
 # Create your views here.
 def personaTestView(request):
@@ -36,6 +40,22 @@ class PersonaListView(ListView):
     model = Persona
     queryset = Persona.objects.filter(edad__lte='40')
 
+def personaAnotherCreateView(request):
+    form = RawPersonaForm()
+    context = {
+        'form':  form,
+    }
+    return render(request, 'personas/personasCreate.html', context)
 
 class PersonaDetailView(DetailView):
     model = Persona
+
+class PersonaCreateView(CreateView):
+    model = Persona
+    fields = [
+        'nombres',
+        'apellidos',
+        'edad',
+        'donador'
+    ]
+    # Specify the correct template

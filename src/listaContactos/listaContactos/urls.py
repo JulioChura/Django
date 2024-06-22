@@ -28,6 +28,6 @@ urlpatterns = [
     path('persona/', personaTestView, name='otro'),
     path('agregar/', personaCreateView, name="createPersona"),
     path('search/', searchForHelp, name="buscar"),
-    path('personas', include('personas.urls')),
+    path('personas/', include('personas.urls')),
 
 ]

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <h1 class="titulo" >Nueva Persona</h1>
+{% endblock title %}
+
+{% block content %}
+    <h1>Nueva Persona</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ forms.as_p }}
+        <input type="submit" value="Save">
+    </form>
+    
+{% endblock content %}

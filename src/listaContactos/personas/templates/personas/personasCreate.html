@@ -2,9 +2,9 @@
 
 {% block content %}
     <form action="." class="container formulario" method="POST">
-        {% comment %} {% csrf_token %}
-        {{form.as_p}} {% endcomment %}
-        <input type="text" name="q" placeholder="buscar">
+       {% csrf_token %}
+        {{form.as_p}}
+        
         <input class="btn" type="submit" value="Grabar">
     </form>
 {% endblock content %}

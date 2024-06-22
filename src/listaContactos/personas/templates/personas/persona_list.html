@@ -16,8 +16,8 @@
         
         {% for instance in object_list  %}
             <p>
-                {{ instance.id }} - 
-                <a href="{{ instance.get_absolute_url }}">{{ instance.nombres }}</a>
+                {{ instance.id }} -
+                <a href='{{ instance.get_absolute_url }}'> {{ instance.nombres }}</a>
             </p>
             
         {% endfor %}
