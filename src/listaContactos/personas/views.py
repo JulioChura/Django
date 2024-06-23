@@ -10,6 +10,10 @@ from .forms import PersonaForm, RawPersonaForm
 
 from django.urls import reverse_lazy
 
+from django.http import HttpResponse
+
+from django.views import View
+
 # Create your views here.
 def personaTestView(request):
     obj = Persona.objects.get(id=1)
@@ -134,3 +138,7 @@ class PersonaDeleteView(DeleteView):
     model = Persona
     success_url = reverse_lazy('personas:persona-list')
 
+
+class PersonaQueryView(View):
+    def get(self, request, *args, **kwargs):
+        return HttpResponse("hola mundo con clases")
