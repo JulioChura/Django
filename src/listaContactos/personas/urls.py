@@ -10,6 +10,7 @@ urlpatterns = [
     #path("<int:myId>/", personasShowObject, name="browsing" ),
     path('list/', personasListView, name="listing"),
     path('eliminar/<int:myID>/', personasDeleteView, name="deleting"),
-    path('eliminar/', personaCreateView, name="delete")
+    path('eliminar/', personaCreateView, name="delete"),
+    path('<int:pk>/update/', PersonaUpdateView.as_view(), name='persona-update')
 
 ]

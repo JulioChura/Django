@@ -3,7 +3,7 @@ from django.views.generic import ListView, DetailView
 
 from django.views.generic.detail import DetailView
 
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 
 from .models import Persona
 from .forms import PersonaForm, RawPersonaForm
@@ -100,6 +100,15 @@ class PersonaCreateView(CreateView):
         'donador'
     ]
     # Specify the correct template
+
+class PersonaUpdateView(UpdateView):
+    model = Persona
+    fields = [
+        'nombres',
+        'apellidos',
+        'edad',
+        'donador'
+    ]
 
 def personasListView(request):
     queryset = Persona.objects.all()
