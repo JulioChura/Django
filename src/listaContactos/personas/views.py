@@ -32,9 +32,21 @@ def personaCreateView(request):
     context = {}
     return render(request, 'personas/personasCreate.html', context)
     #return render(request, 'personas/personasCreate.html', context)
-    """
+    
+    Esto manda los datos de la persona con id = 2 en los campos del formulario
     obj = Persona.objects.get(id=2)
     form = PersonaForm(request.POST or None, instance = obj)
+    if form.is_valid():
+        form.save()
+        form = PersonaForm()
+    context = {
+        'form': form
+    }
+    """
+    initialValues = {
+        'nombres': "Sin nombre"
+    }
+    form = PersonaForm(request.POST  or None, initial = initialValues)
     if form.is_valid():
         form.save()
         form = PersonaForm()
