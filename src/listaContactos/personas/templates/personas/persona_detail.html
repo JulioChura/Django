@@ -1,19 +1,15 @@
 {% extends "base.html" %}
 
-{% block  %}
-    <h1 class="titulo">Detalle de Personas</h1>
-{% endblock  %}
-
 {% block content %}
-    <h2> {{object.apellido }} /  {{ object.nombres }} </h2>
-    <p> {{object.edad}} </p>
+    <h1 class="titulo">Detalle de Personas</h1>
+    <h2>{{ object.apellido }} / {{ object.nombres }}</h2>
+    <p>{{ object.edad }}</p>
     <p>
-        {% if  object.doandor %}
+        {% if object.donador %}
             <p>Es donador de órganos</p>
         {% else %}
             <p>No es donador de órganos</p>
-        {% endif %}     
+        {% endif %}
     </p>
-
-{% endblock content %}
+{% endblock %}
 

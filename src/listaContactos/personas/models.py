@@ -11,5 +11,5 @@ class Persona(models.Model):
 
     def get_absolute_url(self):
         #return "/personas"+ str(self.id) + "/"
-        #return reverse("personas:persona-detail", kwargs={"pk": self.id})
-        return reverse('browsing', kwargs={"myID": self.id})
+        return reverse("personas:persona-detail", kwargs={"pk": self.id})
+        #return reverse('browsing', kwargs={"myID": self.id})
