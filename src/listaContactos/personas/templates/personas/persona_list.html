@@ -14,7 +14,7 @@
     <div class="container">
         <h1>Listado de personas</h1>
         
-        {% for instance in object_list  %}
+        {% for instance in object_|list  %}
             <p>
                 {{ instance.id }} -
                 <a href='{{ instance.get_absolute_url }}'> {{ instance.nombres }}</a>

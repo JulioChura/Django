@@ -107,3 +107,13 @@ def personasListView(request):
         'objectList': queryset
     }
     return render(request, 'personas/personasLista.html', context)
+
+def personasDeleteView(request, myId):
+    obj = get_object_or_404(Persona, id = myId)
+    if request.method == 'POST':
+        print("lo borro")
+        obj.delete()
+    context = {
+        'objeto':obj, 
+    }
+    return render(request, 'personas/personasBorrar.html', context)
