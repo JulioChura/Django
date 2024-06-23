@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block title %}
     <h1 class="titulo">
@@ -12,6 +12,8 @@
 {% block content %}
 
     <div class="container">
+
+        <img src="{% static 'personas/unsa.jpeg' %}" alt="logo unsa">
         <h1>Listado de personas</h1>
         
         {% for instance in object_list  %}
