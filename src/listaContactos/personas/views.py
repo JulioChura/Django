@@ -3,10 +3,12 @@ from django.views.generic import ListView, DetailView
 
 from django.views.generic.detail import DetailView
 
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from .models import Persona
 from .forms import PersonaForm, RawPersonaForm
+
+from django.urls import reverse_lazy
 
 # Create your views here.
 def personaTestView(request):
@@ -127,3 +129,8 @@ def personasDeleteView(request, myID):
         'objeto':obj, 
     }
     return render(request, 'personas/personasBorrar.html', context)
+
+class PersonaDeleteView(DeleteView):
+    model = Persona
+    success_url = reverse_lazy('personas:persona-list')
+

@@ -11,6 +11,8 @@ urlpatterns = [
     path('list/', personasListView, name="listing"),
     path('eliminar/<int:myID>/', personasDeleteView, name="deleting"),
     path('eliminar/', personaCreateView, name="delete"),
-    path('<int:pk>/update/', PersonaUpdateView.as_view(), name='persona-update')
+    path('<int:pk>/update/', PersonaUpdateView.as_view(), name='persona-update'),
+    path('<int:pk>/delete/', PersonaDeleteView.as_view(), name='persona-delete')
+
 
 ]
