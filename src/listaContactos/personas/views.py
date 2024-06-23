@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView, DetailView
 
 from django.views.generic.detail import DetailView
@@ -113,6 +113,7 @@ def personasDeleteView(request, myId):
     if request.method == 'POST':
         print("lo borro")
         obj.delete()
+        return redirect("../")
     context = {
         'objeto':obj, 
     }

@@ -8,6 +8,8 @@ urlpatterns = [
     #path('anotherAdd/', personaAnotherCreateView.as_view() , name="OtroAgregarPersonas"),
     path("add/", personaCreateView, name="form-datosLlenados"),
     path("<int:myId>/", personasShowObject, name="browsing" ),
-    path('list/', personasListView, name="listing")
+    path('list/', personasListView, name="listing"),
+    path('eliminar/<int:myId>/', personasDeleteView, name="deleting"),
+    path('eliminar/', personaCreateView, name="delete")
 
 ]
