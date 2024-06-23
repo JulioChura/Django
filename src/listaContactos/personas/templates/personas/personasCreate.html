@@ -1,11 +1,15 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+
+{% block title %}
+    Nueva Persona
+{% endblock title %}
 
 {% block content %}
-    <form action="." class="container formulario" method="POST">
-       {% csrf_token %}
-        {{form.as_p}}
-        
-        <input class="btn" type="submit" value="Grabar">
+    <h1>Nueva Persona</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
     </form>
 {% endblock content %}
     

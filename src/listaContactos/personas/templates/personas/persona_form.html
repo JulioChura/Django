@@ -5,11 +5,13 @@
 {% endblock title %}
 
 {% block content %}
-    <h1>Nueva Persona</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ forms.as_p }}
-        <input type="submit" value="Save">
-    </form>
+    <div class="container">
+        <h1>Nueva Persona</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Save">
+        </form>
+    </div>
     
 {% endblock content %}
