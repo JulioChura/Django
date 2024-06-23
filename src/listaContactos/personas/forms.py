@@ -8,6 +8,12 @@ class PersonaForm(forms.ModelForm):
             'nombres', 'apellidos', 'edad', 'donador'
         ]
 
+    def clean_nombres(self):
+        name = self.cleaned_data.get('nombres')
+        if name.istitle():
+            return name
+        else:
+            raise forms.ValidationError("La primera letra en mayúscula")
 
 class RawPersonaForm(forms.Form):
     nombres = forms.CharField(
@@ -16,7 +22,7 @@ class RawPersonaForm(forms.Form):
                 'placeholder': 'Solo tu nombre, por favor',
                 'id': 'nombreID',
                 'class': 'cajaGrande',
-                'cols': '10'
+                'cols': '10',
             }
         )
     )

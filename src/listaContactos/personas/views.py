@@ -26,12 +26,23 @@ def personaCreateView(request):
     context = {
         'form': form
     }
-    """
+    
     print('GET :', request.GET )
     print('POST :', request.POST)
     context = {}
     return render(request, 'personas/personasCreate.html', context)
     #return render(request, 'personas/personasCreate.html', context)
+    """
+    obj = Persona.objects.get(id=2)
+    form = PersonaForm(request.POST or None, instance = obj)
+    if form.is_valid():
+        form.save()
+        form = PersonaForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'personas/personasCreate.html', context)
+
 
 def searchForHelp(request):
     return render(request, 'personas/search.html', {})
