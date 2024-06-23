@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
 
 from django.views.generic.detail import DetailView
@@ -57,7 +57,8 @@ def personaCreateView(request):
 
 
 def personasShowObject(request, myId):
-    obj = Persona.objects.get(id=myId)
+    #obj = Persona.objects.get(id=myId)
+    obj = get_object_or_404(Persona, id = myId)
     context  = {
         'object': obj,
     }
