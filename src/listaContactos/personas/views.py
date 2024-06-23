@@ -108,8 +108,8 @@ def personasListView(request):
     }
     return render(request, 'personas/personasLista.html', context)
 
-def personasDeleteView(request, myId):
-    obj = get_object_or_404(Persona, id = myId)
+def personasDeleteView(request, myID):
+    obj = get_object_or_404(Persona, id = myID)
     if request.method == 'POST':
         print("lo borro")
         obj.delete()

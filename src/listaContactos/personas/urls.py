@@ -9,7 +9,7 @@ urlpatterns = [
     path("add/", personaCreateView, name="form-datosLlenados"),
     path("<int:myId>/", personasShowObject, name="browsing" ),
     path('list/', personasListView, name="listing"),
-    path('eliminar/<int:myId>/', personasDeleteView, name="deleting"),
+    path('eliminar/<int:myID>/', personasDeleteView, name="deleting"),
     path('eliminar/', personaCreateView, name="delete")
 
 ]
