@@ -17,6 +17,8 @@ def personaTestView(request):
     }
     return render(request, 'personas/test.html', context)
 
+
+
 def personaCreateView(request):
     """""
     form = PersonaForm(request.POST or None)
@@ -98,3 +100,10 @@ class PersonaCreateView(CreateView):
         'donador'
     ]
     # Specify the correct template
+
+def personasListView(request):
+    queryset = Persona.objects.all()
+    context = {
+        'objectList': queryset
+    }
+    return render(request, 'personas/personasLista.html', context)
