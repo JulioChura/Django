@@ -10,7 +10,7 @@ from .forms import PersonaForm, RawPersonaForm
 
 from django.urls import reverse_lazy
 
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 
 from django.views import View
 
@@ -141,4 +141,5 @@ class PersonaDeleteView(DeleteView):
 
 class PersonaQueryView(View):
     def get(self, request, *args, **kwargs):
-        return HttpResponse("hola mundo con clases")
+        queryset = Persona.objects.filter(edad__lte='40')
+        return JsonResponse(list(queryset.values()), safe = False )
